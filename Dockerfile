@@ -6,6 +6,6 @@ From python:3.6-alpine
 
 RUN mkdir /app
 ADD . /app
-RUN python /app/setup.py install
+RUN cd /app/ && python setup.py install
 
 ENTRYPOINT ["quiver2wiki"]

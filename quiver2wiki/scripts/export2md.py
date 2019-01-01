@@ -17,8 +17,8 @@ def get_overall_structure(quiver_location,ignore_notebooks=[]):
 
     notes=dict()
     for notebook in notebooks:
-        notes{notebook} = json.load(os.path.join(notebooks,"meta.json"))
-        notes{notebook}['file_location'] = notebook
+        notes[notebook] = json.load(os.path.join(notebooks,"meta.json"))
+        notes[notebook]['file_location'] = notebook
 
     overall_structure = notes
 
@@ -29,8 +29,8 @@ def load_pages(quiver_location,overall_structure):
     pages = dict()
 
     for notebook in overall_structure.keys():
-        pages{notebook}
-        pages{notebook}['meta']=
+        pages[notebook]
+        pages[notebook]['meta']=
     return
 
 def batch_export(quiver_location,wiki_location,overall_structure,pages):

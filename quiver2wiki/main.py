@@ -1,12 +1,10 @@
 import os
 import sys
 import argparse
-from quiver2wiki.scripts import export2md
-
 
 def main():
 
-    parser = argparse.Argument Parser(
+    parser = argparse.ArgumentParser(
     description = 'helper tool for making quiver libraries into wikis')
 
     parser.add_argument("--export",dest='export', help="export quiver library into markdown files", type=str, default=None)
