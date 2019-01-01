@@ -1,7 +1,7 @@
 import os
 import sys
 import argparse
-from quiver2wiki.scripts import utils
+from quiver2wiki.scripts import utils,report
 
 def main():
 
@@ -23,23 +23,12 @@ def main():
 
     if args.list == True:
         nb_list=utils.list_notebooks(args.quiver_lib)
-        print("The list of notebooks within the quiver library at %s is: "%(args.quiver_lib))
-        for nb in nb_list:
-            print(nb)
+        report.report_notebooks(args.quiver_lib,nb_list)
+
     elif args.list_pages == True:
         nb_list,nb_dict=utils.list_notebooks(args.quiver_lib)
         page_dict=utils.list_pages(args.quiver_lib,nb_dict)
-
-        print("The page organization for the quiver library at %s is: "%args.quiver_lib)
-
-        for page in page_dict:
-            print("Quiver Notebook: %s"%page)
-            if len(page_dict[page]) == 0:
-                print("    There are no pages within this notebook")
-            else:
-                for page in page_dict[page]:
-                    print("    - %s "%page)
-
+        report.report_pages(args.quiver_lib,page_dict)
 
     else:
         parser.print_help()
