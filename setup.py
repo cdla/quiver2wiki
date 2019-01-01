@@ -11,4 +11,9 @@ setup(name=package_name,
       author = 'Carlo de los Angeles',
       author_email = 'carlo.delosangeles@gmail.com',
       url = 'https://github.com/cdla/quiver2wiki/',
-      )
+      entry_points = {
+            'console_scripts': [
+                  'quiver2wiki:quiver2wiki.scripts:main',
+            ],
+      },
+)
