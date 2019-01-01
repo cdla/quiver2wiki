@@ -29,8 +29,7 @@ def load_pages(quiver_location,overall_structure):
     pages = dict()
 
     for notebook in overall_structure.keys():
-        pages[notebook]
-        pages[notebook]['meta']=
+        pages[notebook]['meta']=''
     return
 
 def batch_export(quiver_location,wiki_location,overall_structure,pages):

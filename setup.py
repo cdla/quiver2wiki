@@ -13,6 +13,9 @@ setup(name=package_name,
       url = 'https://github.com/cdla/quiver2wiki/',
       zip_safe = False,
       packages = find_packages(),
+      install_requires = [
+        'markdown',
+      ],
       entry_points = {
             'console_scripts': [
                   'quiver2wiki=quiver2wiki.main:main',
